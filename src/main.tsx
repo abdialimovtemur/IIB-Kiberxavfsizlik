@@ -1,10 +1,14 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
+import React from 'react'
+import ReactDOM from 'react-dom/client'
 import './index.css'
-import App from './App.tsx'
+import App from './App'
+import { ConfigProvider } from 'antd'
+import uz_UZ from 'antd/locale/uz_UZ'
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
+ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+  <React.StrictMode>
+    <ConfigProvider locale={uz_UZ}>
+      <App />
+    </ConfigProvider>
+  </React.StrictMode>,
 )
