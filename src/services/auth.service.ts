@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { LoginRequest, LoginResponse, User } from '../types/api.types';
+import {  LoginResponse, User } from '../types/api.types';
 
 const baseUrl = 'http://127.0.0.1:8000/api/v1';
 
@@ -48,6 +48,11 @@ export const authService = {
 
   logout: async () => {
     const response = await axios.post(`${baseUrl}/users/logout/`);
+    return response.data;
+  },
+
+  refreshToken: async (refreshToken: string) => {
+    const response = await axios.post('/auth/refresh/', { refresh: refreshToken });
     return response.data;
   }
 };

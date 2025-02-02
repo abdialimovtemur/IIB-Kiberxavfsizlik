@@ -58,7 +58,7 @@ const Settings = () => {
           form={profileForm}
           layout="vertical"
           onFinish={handleProfileUpdate}
-          initialValues={user}
+          initialValues={user || undefined}
         >
           <Form.Item label="Avatar">
             <Upload

@@ -87,10 +87,10 @@ const WorkPlaces = () => {
   const handleSubmit = async (values: any) => {
     try {
       if (selectedWorkplace) {
-        await workplacesService.updateWorkplace(selectedWorkplace.id, values);
+        await workplacesService.updateWorkPlace(selectedWorkplace.id, values);
         message.success('Ish joyi yangilandi');
       } else {
-        await workplacesService.createWorkplace(values);
+        await workplacesService.createWorkPlace(values);
         message.success('Ish joyi yaratildi');
       }
       setIsModalVisible(false);

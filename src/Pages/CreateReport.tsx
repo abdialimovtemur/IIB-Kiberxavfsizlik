@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import { Card, Form, Input, DatePicker, Select, Upload, Button, message, Space } from 'antd';
-import { UploadOutlined } from '@ant-design/icons';
+import { Card, Form, Input,  Button, message, Space } from 'antd';
 import { reportsService } from '../services/reports.service';
 import { useNavigate } from 'react-router-dom';
 import type { UploadFile } from 'antd/es/upload/interface';
@@ -8,7 +7,7 @@ import type { UploadFile } from 'antd/es/upload/interface';
 const CreateReport = () => {
   const navigate = useNavigate();
   const [form] = Form.useForm();
-  const [fileList, setFileList] = useState<UploadFile[]>([]);
+  const [fileList] = useState<UploadFile[]>([]);
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (values: any) => {

@@ -152,7 +152,7 @@ const ReportDetails = () => {
           <Card title="Fayllar" style={{ marginTop: 16 }}>
             <Upload
               fileList={fileList}
-              customRequest={({ file }) => handleUpload(file as File)}
+              customRequest={({ file }) => handleUpload(file as unknown as File)}
               multiple
             >
               <Button icon={<UploadOutlined />}>Fayl yuklash</Button>

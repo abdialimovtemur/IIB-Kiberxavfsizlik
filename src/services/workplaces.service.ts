@@ -1,5 +1,4 @@
 import axios from 'axios';
-import { WorkPlace } from '../types/api.types';
 
 const baseUrl = 'http://127.0.0.1:8000/api/v1';
 

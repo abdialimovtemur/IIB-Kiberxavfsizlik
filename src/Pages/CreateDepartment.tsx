@@ -69,7 +69,7 @@ const CreateDepartment = () => {
           rules={[{ required: true, message: 'Ish joyini tanlang!' }]}
         >
           <Select>
-            {workplaces.map(workplace => (
+            {workplaces.map((workplace: { id: number; name: string }) => (
               <Select.Option key={workplace.id} value={workplace.id}>
                 {workplace.name}
               </Select.Option>

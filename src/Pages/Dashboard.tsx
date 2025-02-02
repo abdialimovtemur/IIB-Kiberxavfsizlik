@@ -12,7 +12,6 @@ import { reportsService } from '../services/reports.service';
 import { usersService } from '../services/users.service';
 import { workplacesService } from '../services/workplaces.service';
 import { exportService } from '../services/export.service';
-import { Crime } from '../types/api.types';
 import { useAuth } from '../hooks/useAuth';
 import dayjs from 'dayjs';
 import { useNavigate } from 'react-router-dom';
@@ -122,16 +121,8 @@ const Dashboard = () => {
     }
   };
 
-  const handleUserClick = (userId: number) => {
-    navigate(`/users/${userId}`);
-  };
-
   const handleReportClick = (reportId: number) => {
     navigate(`/reports/${reportId}`);
-  };
-
-  const handleRegionClick = (regionId: number) => {
-    navigate(`/regions/${regionId}`);
   };
 
   const columns = [
